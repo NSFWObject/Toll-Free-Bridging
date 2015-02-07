@@ -8,10 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import "BitVector.h"
-
-extern void _CFRuntimeBridgeClasses(CFTypeID cfType, const char *className);
-
 
 @interface AppDelegate ()
 
@@ -21,14 +17,6 @@ extern void _CFRuntimeBridgeClasses(CFTypeID cfType, const char *className);
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    _CFRuntimeBridgeClasses(CFBitVectorGetTypeID(), "BitVector");
-    
-    BitVector *bv2 = [BitVector new];
-    [bv2 count];
-    
-    CFMutableBitVectorRef bv = CFBitVectorCreateMutable(kCFAllocatorDefault, 10);
-    [(__bridge BitVector *)bv count];
-    
     return YES;
 }
 
