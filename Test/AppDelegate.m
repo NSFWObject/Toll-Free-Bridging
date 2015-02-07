@@ -8,6 +8,11 @@
 
 #import "AppDelegate.h"
 
+#import "BitVector.h"
+
+extern void _CFRuntimeBridgeClasses(CFTypeID cfType, const char *className);
+
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +21,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    _CFRuntimeBridgeClasses(CFBitVectorGetTypeID(), "BitVector");
+    
+    CFMutableBitVectorRef bv = CFBitVectorCreateMutable(kCFAllocatorDefault, 10);
+    [(__bridge BitVector *)bv count];
+    
     return YES;
 }
 

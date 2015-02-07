@@ -14,6 +14,7 @@
 		5CC6772D1A86AE6C00A5062B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CC6772C1A86AE6C00A5062B /* Images.xcassets */; };
 		5CC677301A86AE6C00A5062B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC6772E1A86AE6C00A5062B /* LaunchScreen.xib */; };
 		5CC6773C1A86AE6C00A5062B /* TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC6773B1A86AE6C00A5062B /* TestTests.m */; };
+		5CC677481A86B4D800A5062B /* BitVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC677471A86B4D800A5062B /* BitVector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		5CC677351A86AE6C00A5062B /* TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC6773A1A86AE6C00A5062B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CC6773B1A86AE6C00A5062B /* TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTests.m; sourceTree = "<group>"; };
+		5CC677461A86B4D800A5062B /* BitVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitVector.h; sourceTree = "<group>"; };
+		5CC677471A86B4D800A5062B /* BitVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitVector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		5CC6771E1A86AE6C00A5062B /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				5CC677451A86B4CE00A5062B /* BitVector */,
 				5CC677231A86AE6C00A5062B /* AppDelegate.h */,
 				5CC677241A86AE6C00A5062B /* AppDelegate.m */,
 				5CC677261A86AE6C00A5062B /* ViewController.h */,
@@ -117,6 +121,15 @@
 				5CC6773A1A86AE6C00A5062B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5CC677451A86B4CE00A5062B /* BitVector */ = {
+			isa = PBXGroup;
+			children = (
+				5CC677461A86B4D800A5062B /* BitVector.h */,
+				5CC677471A86B4D800A5062B /* BitVector.m */,
+			);
+			name = BitVector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC677481A86B4D800A5062B /* BitVector.m in Sources */,
 				5CC677281A86AE6C00A5062B /* ViewController.m in Sources */,
 				5CC677251A86AE6C00A5062B /* AppDelegate.m in Sources */,
 				5CC677221A86AE6C00A5062B /* main.m in Sources */,
