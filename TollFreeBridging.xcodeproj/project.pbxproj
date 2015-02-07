@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5CC6771C1A86AE6C00A5062B /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC6771C1A86AE6C00A5062B /* TollFreeBridging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TollFreeBridging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC677201A86AE6C00A5062B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CC677211A86AE6C00A5062B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CC677231A86AE6C00A5062B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		5CC6772A1A86AE6C00A5062B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CC6772C1A86AE6C00A5062B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5CC6772F1A86AE6C00A5062B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5CC677351A86AE6C00A5062B /* TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC677351A86AE6C00A5062B /* TollFreeBridgingTollFreeBridgings.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TollFreeBridgingTollFreeBridgings.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC6773A1A86AE6C00A5062B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CC6773B1A86AE6C00A5062B /* TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTests.m; sourceTree = "<group>"; };
 		5CC677461A86B4D800A5062B /* BitVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitVector.h; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		5CC677131A86AE6C00A5062B = {
 			isa = PBXGroup;
 			children = (
-				5CC6771E1A86AE6C00A5062B /* Test */,
+				5CC6771E1A86AE6C00A5062B /* TollFreeBridging */,
 				5CC677381A86AE6C00A5062B /* TestTests */,
 				5CC6771D1A86AE6C00A5062B /* Products */,
 			);
@@ -75,13 +75,13 @@
 		5CC6771D1A86AE6C00A5062B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5CC6771C1A86AE6C00A5062B /* Test.app */,
-				5CC677351A86AE6C00A5062B /* TestTests.xctest */,
+				5CC6771C1A86AE6C00A5062B /* TollFreeBridging.app */,
+				5CC677351A86AE6C00A5062B /* TollFreeBridgingTollFreeBridgings.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5CC6771E1A86AE6C00A5062B /* Test */ = {
+		5CC6771E1A86AE6C00A5062B /* TollFreeBridging */ = {
 			isa = PBXGroup;
 			children = (
 				5CC677451A86B4CE00A5062B /* BitVector */,
@@ -94,6 +94,7 @@
 				5CC6772E1A86AE6C00A5062B /* LaunchScreen.xib */,
 				5CC6771F1A86AE6C00A5062B /* Supporting Files */,
 			);
+			name = TollFreeBridging;
 			path = Test;
 			sourceTree = "<group>";
 		};
@@ -135,9 +136,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5CC6771B1A86AE6C00A5062B /* Test */ = {
+		5CC6771B1A86AE6C00A5062B /* TollFreeBridging */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5CC6773F1A86AE6C00A5062B /* Build configuration list for PBXNativeTarget "Test" */;
+			buildConfigurationList = 5CC6773F1A86AE6C00A5062B /* Build configuration list for PBXNativeTarget "TollFreeBridging" */;
 			buildPhases = (
 				5CC677181A86AE6C00A5062B /* Sources */,
 				5CC677191A86AE6C00A5062B /* Frameworks */,
@@ -147,14 +148,14 @@
 			);
 			dependencies = (
 			);
-			name = Test;
+			name = TollFreeBridging;
 			productName = Test;
-			productReference = 5CC6771C1A86AE6C00A5062B /* Test.app */;
+			productReference = 5CC6771C1A86AE6C00A5062B /* TollFreeBridging.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5CC677341A86AE6C00A5062B /* TestTests */ = {
+		5CC677341A86AE6C00A5062B /* TollFreeBridgingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5CC677421A86AE6C00A5062B /* Build configuration list for PBXNativeTarget "TestTests" */;
+			buildConfigurationList = 5CC677421A86AE6C00A5062B /* Build configuration list for PBXNativeTarget "TollFreeBridgingTests" */;
 			buildPhases = (
 				5CC677311A86AE6C00A5062B /* Sources */,
 				5CC677321A86AE6C00A5062B /* Frameworks */,
@@ -165,9 +166,9 @@
 			dependencies = (
 				5CC677371A86AE6C00A5062B /* PBXTargetDependency */,
 			);
-			name = TestTests;
+			name = TollFreeBridgingTests;
 			productName = TestTests;
-			productReference = 5CC677351A86AE6C00A5062B /* TestTests.xctest */;
+			productReference = 5CC677351A86AE6C00A5062B /* TollFreeBridgingTollFreeBridgings.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +189,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5CC677171A86AE6C00A5062B /* Build configuration list for PBXProject "Test" */;
+			buildConfigurationList = 5CC677171A86AE6C00A5062B /* Build configuration list for PBXProject "TollFreeBridging" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -201,8 +202,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5CC6771B1A86AE6C00A5062B /* Test */,
-				5CC677341A86AE6C00A5062B /* TestTests */,
+				5CC6771B1A86AE6C00A5062B /* TollFreeBridging */,
+				5CC677341A86AE6C00A5062B /* TollFreeBridgingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,7 +253,7 @@
 /* Begin PBXTargetDependency section */
 		5CC677371A86AE6C00A5062B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5CC6771B1A86AE6C00A5062B /* Test */;
+			target = 5CC6771B1A86AE6C00A5062B /* TollFreeBridging */;
 			targetProxy = 5CC677361A86AE6C00A5062B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -361,7 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TollFreeBridging;
 			};
 			name = Debug;
 		};
@@ -371,7 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TollFreeBridging;
 			};
 			name = Release;
 		};
@@ -389,8 +390,8 @@
 				);
 				INFOPLIST_FILE = TestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
+				PRODUCT_NAME = TollFreeBridgingTollFreeBridgings;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TollFreeBridging.app/TollFreeBridging";
 			};
 			name = Debug;
 		};
@@ -404,15 +405,15 @@
 				);
 				INFOPLIST_FILE = TestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
+				PRODUCT_NAME = TollFreeBridgingTollFreeBridgings;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TollFreeBridging.app/TollFreeBridging";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5CC677171A86AE6C00A5062B /* Build configuration list for PBXProject "Test" */ = {
+		5CC677171A86AE6C00A5062B /* Build configuration list for PBXProject "TollFreeBridging" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CC6773D1A86AE6C00A5062B /* Debug */,
@@ -421,21 +422,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5CC6773F1A86AE6C00A5062B /* Build configuration list for PBXNativeTarget "Test" */ = {
+		5CC6773F1A86AE6C00A5062B /* Build configuration list for PBXNativeTarget "TollFreeBridging" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CC677401A86AE6C00A5062B /* Debug */,
 				5CC677411A86AE6C00A5062B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		5CC677421A86AE6C00A5062B /* Build configuration list for PBXNativeTarget "TestTests" */ = {
+		5CC677421A86AE6C00A5062B /* Build configuration list for PBXNativeTarget "TollFreeBridgingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CC677431A86AE6C00A5062B /* Debug */,
 				5CC677441A86AE6C00A5062B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
