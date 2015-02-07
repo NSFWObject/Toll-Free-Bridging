@@ -32,6 +32,9 @@
 #pragma mark - Public
 
 - (NSUInteger)count {
+    if (CFGetTypeID((__bridge CFTypeRef)self) == CFBitVectorGetTypeID()) {
+        return CFBitVectorGetCount((__bridge CFBitVectorRef)self);
+    }
     return self.storage.count;
 }
 
