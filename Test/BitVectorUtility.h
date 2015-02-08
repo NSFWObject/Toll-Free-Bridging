@@ -12,6 +12,6 @@
 
 + (instancetype)sharedUtility;
 
-- (void)regsiterBitVector;
+- (void)enableBitVectorBridging;
 
 @end

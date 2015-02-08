@@ -16,7 +16,15 @@ typedef CFBit Bit;
 
 + (instancetype)bitVector;
 
++ (instancetype)bitVectorWithBits:(Bit *)bits count:(NSUInteger)count;
+
++ (instancetype)bitVectorWithArray:(NSArray *)bitsArray;
+
 @property (nonatomic, readonly) NSUInteger count;
+
+- (instancetype)initWithBits:(Bit *)bits count:(NSUInteger)count;
+
+- (instancetype)initWithArray:(NSArray *)bitsArray NS_DESIGNATED_INITIALIZER;
 
 - (NSUInteger)countOfBit:(Bit)bit inRange:(NSRange)range;
 

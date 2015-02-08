@@ -20,12 +20,33 @@
     return [[self alloc] init];
 }
 
++ (instancetype)bitVectorWithBits:(Bit *)bits count:(NSUInteger)count {
+    return [[self alloc] initWithBits:bits count:count];
+}
+
++ (instancetype)bitVectorWithArray:(NSArray *)bitsArray {
+    return [[self alloc] initWithArray:bitsArray];
+}
+
 - (instancetype)init {
+    return [self initWithArray:nil];
+}
+
+- (instancetype)initWithBits:(Bit *)bits count:(NSUInteger)count {
+    NSMutableArray *storage = [NSMutableArray array];
+    for (NSUInteger i = 0; i < count; ++i) {
+        Bit bit = bits[i];
+        [storage addObject:@(bit)];
+    }
+    return [self initWithArray:storage];
+}
+
+- (instancetype)initWithArray:(NSArray *)bitsArray {
     self = [super init];
     if (!self) {
         return nil;
     }
-    self.storage = [NSMutableArray array];
+    self.storage = bitsArray ? [bitsArray mutableCopy] : [NSMutableArray array];
     return self;
 }
 
@@ -39,9 +60,11 @@
 }
 
 - (NSUInteger)countOfBit:(Bit)bit inRange:(NSRange)range {
-    if (NSMaxRange(range) >= self.storage.count) {
-        @throw [NSException exceptionWithName:NSRangeException reason:nil userInfo:nil];
+    if (CFGetTypeID((__bridge CFTypeRef)self) == CFBitVectorGetTypeID()) {
+        return CFBitVectorGetCountOfBit((__bridge CFBitVectorRef)self, (CFRange){range.location, range.length}, bit);
     }
+    
+    NSAssert(NSMaxRange(range) <= self.storage.count, NSRangeException);
     
     NSUInteger counter = 0;
     for (NSNumber *number in self.storage) {

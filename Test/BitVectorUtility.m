@@ -14,7 +14,22 @@
 
 
 extern void _CFRuntimeBridgeClasses(CFTypeID cfType, const char *className);
+
 static CFIndex (*_CFBitVectorGetCount)(CFBitVectorRef bv);
+CFIndex __CFBitVectorGetCount(CFBitVectorRef bv) {
+    if (CFGetTypeID(bv) == CFBitVectorGetTypeID()) {
+        return _CFBitVectorGetCount(bv);
+    }
+    return [(__bridge BitVector *)bv count];
+}
+
+static CFIndex (*_CFBitVectorGetCountOfBit)(CFBitVectorRef bv, CFRange range, CFBit value);
+CFIndex __CFBitVectorGetCountOfBit(CFBitVectorRef bv, CFRange range, CFBit value) {
+    if (CFGetTypeID(bv) == CFBitVectorGetTypeID()) {
+        return _CFBitVectorGetCountOfBit(bv, range, value);
+    }
+    return [(__bridge BitVector *)bv countOfBit:value inRange:(NSRange){range.location, range.length}];
+}
 
 @implementation BitVectorUtility
 
@@ -29,7 +44,7 @@ static CFIndex (*_CFBitVectorGetCount)(CFBitVectorRef bv);
 
 #pragma mark - Public
 
-- (void)regsiterBitVector {
+- (void)enableBitVectorBridging {
     [self _registerCoreFoundation];
     [self _registerObjectiveC];
 }
@@ -37,8 +52,13 @@ static CFIndex (*_CFBitVectorGetCount)(CFBitVectorRef bv);
 #pragma mark - Private
 
 - (void)_registerCoreFoundation {
+    // CFBitVectorGetCount
     _CFBitVectorGetCount = dlsym(RTLD_DEFAULT, "CFBitVectorGetCount");
-    
+    rebind_symbols((struct rebinding[1]){{"CFBitVectorGetCount", __CFBitVectorGetCount}}, 1);
+
+    // CFBitVectorGetCountOfBit
+    _CFBitVectorGetCountOfBit = dlsym(RTLD_DEFAULT, "CFBitVectorGetCountOfBit");
+    rebind_symbols((struct rebinding[1]){{"CFBitVectorGetCountOfBit", __CFBitVectorGetCountOfBit}}, 1);
 }
 
 - (void)_registerObjectiveC {

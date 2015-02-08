@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+#import "BitVector.h"
 #import "BitVectorUtility.h"
 
 @interface ViewController ()
@@ -19,7 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[BitVectorUtility sharedUtility] regsiterBitVector];
 }
 
 - (void)didReceiveMemoryWarning {
