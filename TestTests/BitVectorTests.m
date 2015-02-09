@@ -29,12 +29,9 @@
     
     UInt8 sample = 255;
     self.cfBitVector = CFBitVectorCreate(kCFAllocatorDefault, (const UInt8 *)&sample, 8);
-    self.bitVector = [[BitVector alloc] initWithBits:(const UInt8 *)&sample count:8];
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+    
+    UInt8 mySample[8] = {1,1,1,1,1,1,1,1};
+    self.bitVector = [[BitVector alloc] initWithBits:mySample count:8];
 }
 
 - (void)testCount {
