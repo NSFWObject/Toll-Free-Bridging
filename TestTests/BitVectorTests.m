@@ -27,11 +27,9 @@
 - (void)setUp {
     [super setUp];
     
-    UInt8 cfBits[2] = {0,1};
-    self.cfBitVector = CFBitVectorCreate(kCFAllocatorDefault, cfBits, 2);
-    
-    Bit bits[3] = {1,0,1};
-    self.bitVector = [[BitVector alloc] initWithBits:bits count:3];
+    UInt8 sample = 255;
+    self.cfBitVector = CFBitVectorCreate(kCFAllocatorDefault, (const UInt8 *)&sample, 8);
+    self.bitVector = [[BitVector alloc] initWithBits:(const UInt8 *)&sample count:8];
 }
 
 - (void)tearDown {
@@ -40,14 +38,24 @@
 }
 
 - (void)testCount {
-    XCTAssertEqual(CFBitVectorGetCount(self.cfBitVector), [(__bridge BitVector *)self.cfBitVector count]);
-    XCTAssertEqual(CFBitVectorGetCount((__bridge CFBitVectorRef)self.bitVector), [self.bitVector count]);
+    XCTAssertEqual(CFBitVectorGetCount(self.cfBitVector), ((__bridge BitVector *)self.cfBitVector).count);
+    XCTAssertEqual(CFBitVectorGetCount((__bridge CFBitVectorRef)self.bitVector), self.bitVector.count);
 }
 
 - (void)testCountOfBits {
-    XCTAssertEqual(CFBitVectorGetCountOfBit(self.cfBitVector, CFRangeMake(0, CFBitVectorGetCount(self.cfBitVector)), 1), [(__bridge BitVector *)self.cfBitVector countOfBit:1 inRange:NSMakeRange(0, CFBitVectorGetCount(self.cfBitVector))]);
-    XCTAssertEqual(CFBitVectorGetCountOfBit((__bridge CFBitVectorRef)self.bitVector, CFRangeMake(0, self.bitVector.count), 1), [self.bitVector countOfBit:1 inRange:NSMakeRange(0, self.bitVector.count)]);
+    XCTAssertEqual(CFBitVectorGetCountOfBit(self.cfBitVector, CFRangeMake(0, CFBitVectorGetCount(self.cfBitVector)), 1),
+                   [(__bridge BitVector *)self.cfBitVector countOfBit:1 inRange:NSMakeRange(0, CFBitVectorGetCount(self.cfBitVector))]);
+    
+    XCTAssertEqual(CFBitVectorGetCountOfBit((__bridge CFBitVectorRef)self.bitVector, (CFRange){0, self.bitVector.count}, 1),
+                   [self.bitVector countOfBit:1 inRange:NSMakeRange(0, self.bitVector.count)]);
+}
+
+- (void)testContainsBit {
+    XCTAssertEqual(CFBitVectorContainsBit(self.cfBitVector, CFRangeMake(0, CFBitVectorGetCount(self.cfBitVector)), 1),
+                   [(__bridge BitVector *)self.cfBitVector containsBit:1 inRange:NSMakeRange(0, CFBitVectorGetCount(self.cfBitVector))]);
+
+    XCTAssertEqual(CFBitVectorContainsBit((__bridge CFBitVectorRef)self.bitVector, (CFRange){0, self.bitVector.count}, 1),
+                   [self.bitVector containsBit:1 inRange:NSMakeRange(0, self.bitVector.count)]);
 }
 
 @end
-¿¿
