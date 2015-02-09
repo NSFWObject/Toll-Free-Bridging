@@ -39,6 +39,14 @@ Boolean	__CFBitVectorContainsBit(CFBitVectorRef bv, CFRange range, CFBit value) 
     return [(__bridge BitVector *)bv containsBit:value inRange:(NSRange){range.location, range.length}];
 }
 
+static void(*_CFBitVectorFlipBitAtIndex)(CFMutableBitVectorRef bv, CFIndex idx);
+void __CFBitVectorFlipBitAtIndex(CFMutableBitVectorRef bv, CFIndex idx) {
+    if (CFGetTypeID(bv) == CFBitVectorGetTypeID()) {
+        return _CFBitVectorFlipBitAtIndex(bv, idx);
+    }
+    [(__bridge MutableBitVector *)bv flipBitAtIndex:idx];
+}
+
 @implementation BitVectorUtility
 
 + (instancetype)sharedUtility {
@@ -71,12 +79,16 @@ Boolean	__CFBitVectorContainsBit(CFBitVectorRef bv, CFRange range, CFBit value) 
     // CFBitVectorContainsBit
     _CFBitVectorContainsBit = dlsym(RTLD_DEFAULT, "CFBitVectorContainsBit");
     rebind_symbols((struct rebinding[1]){{"CFBitVectorContainsBit", __CFBitVectorContainsBit}}, 1);
+    
+    // CFBitVectorFlipBitAtIndex
+    _CFBitVectorFlipBitAtIndex = dlsym(RTLD_DEFAULT, "CFBitVectorFlipBitAtIndex");
+    rebind_symbols((struct rebinding[1]){{"CFBitVectorFlipBitAtIndex", __CFBitVectorFlipBitAtIndex}}, 1);
 }
 
 - (void)_registerObjectiveC {
     // This line tells to the Objective-C runtime,
     // if message sent to CFBitVector, forward it to BitVector
-    _CFRuntimeBridgeClasses(CFBitVectorGetTypeID(), "BitVector");
+    _CFRuntimeBridgeClasses(CFBitVectorGetTypeID(), "MutableBitVector");
 }
 
 @end

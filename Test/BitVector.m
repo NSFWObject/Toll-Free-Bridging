@@ -170,6 +170,11 @@
 }
 
 - (void)flipBitAtIndex:(NSUInteger)index {
+    if (CFGetTypeID((__bridge CFTypeRef)self) == CFBitVectorGetTypeID()) {
+        CFBitVectorFlipBitAtIndex((__bridge CFMutableBitVectorRef)self, index);
+        return;
+    }
+    
     NSAssert(index < self.storage.count, NSRangeException);
 
     self.storage[index] = @(1 - [self.storage[index] unsignedIntValue]);
