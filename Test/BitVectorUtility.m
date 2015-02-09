@@ -31,6 +31,14 @@ CFIndex __CFBitVectorGetCountOfBit(CFBitVectorRef bv, CFRange range, CFBit value
     return [(__bridge BitVector *)bv countOfBit:value inRange:(NSRange){range.location, range.length}];
 }
 
+static Boolean(*_CFBitVectorContainsBit)(CFBitVectorRef bv, CFRange range, CFBit value);
+Boolean	__CFBitVectorContainsBit(CFBitVectorRef bv, CFRange range, CFBit value) {
+    if (CFGetTypeID(bv) == CFBitVectorGetTypeID()) {
+        return _CFBitVectorContainsBit(bv, range, value);
+    }
+    return [(__bridge BitVector *)bv containsBit:value inRange:(NSRange){range.location, range.length}];
+}
+
 @implementation BitVectorUtility
 
 + (instancetype)sharedUtility {
@@ -59,6 +67,10 @@ CFIndex __CFBitVectorGetCountOfBit(CFBitVectorRef bv, CFRange range, CFBit value
     // CFBitVectorGetCountOfBit
     _CFBitVectorGetCountOfBit = dlsym(RTLD_DEFAULT, "CFBitVectorGetCountOfBit");
     rebind_symbols((struct rebinding[1]){{"CFBitVectorGetCountOfBit", __CFBitVectorGetCountOfBit}}, 1);
+    
+    // CFBitVectorContainsBit
+    _CFBitVectorContainsBit = dlsym(RTLD_DEFAULT, "CFBitVectorContainsBit");
+    rebind_symbols((struct rebinding[1]){{"CFBitVectorContainsBit", __CFBitVectorContainsBit}}, 1);
 }
 
 - (void)_registerObjectiveC {

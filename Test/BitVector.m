@@ -20,7 +20,7 @@
     return [[self alloc] init];
 }
 
-+ (instancetype)bitVectorWithBits:(Bit *)bits count:(NSUInteger)count {
++ (instancetype)bitVectorWithBits:(const UInt8 *)bits count:(NSUInteger)count {
     return [[self alloc] initWithBits:bits count:count];
 }
 
@@ -32,7 +32,7 @@
     return [self initWithArray:nil];
 }
 
-- (instancetype)initWithBits:(Bit *)bits count:(NSUInteger)count {
+- (instancetype)initWithBits:(const UInt8 *)bits count:(NSUInteger)count {
     NSMutableArray *storage = [NSMutableArray array];
     for (NSUInteger i = 0; i < count; ++i) {
         Bit bit = bits[i];
@@ -76,7 +76,11 @@
 }
 
 - (BOOL)containsBit:(Bit)bit inRange:(NSRange)range {
-    NSAssert(NSMaxRange(range) < self.storage.count, NSRangeException);
+    if (CFGetTypeID((__bridge CFTypeRef)self) == CFBitVectorGetTypeID()) {
+        return CFBitVectorContainsBit((__bridge CFBitVectorRef)self, (CFRange){range.location, range.length}, bit);
+    }
+
+    NSAssert(NSMaxRange(range) <= self.storage.count, NSRangeException);
     
     for (NSNumber *number in self.storage) {
         if (number.unsignedIntValue == bit) {
@@ -93,7 +97,7 @@
 }
 
 - (void)getBits:(out Bit *)bits inRange:(NSRange)range {
-    NSAssert(NSMaxRange(range) < self.storage.count, NSRangeException);
+    NSAssert(NSMaxRange(range) <= self.storage.count, NSRangeException);
 
     bits = malloc(sizeof(Bit) * range.length);
     for (NSUInteger index = range.location; index < NSMaxRange(range); ++index) {
@@ -102,7 +106,7 @@
 }
 
 - (NSUInteger)firstIndexOfBit:(Bit)bit inRange:(NSRange)range {
-    NSAssert(NSMaxRange(range) < self.storage.count, NSRangeException);
+    NSAssert(NSMaxRange(range) <= self.storage.count, NSRangeException);
     
     for (NSUInteger index = range.location; index < NSMaxRange(range); ++index) {
         if ([self.storage[index] unsignedIntValue] == bit) {
@@ -113,7 +117,7 @@
 }
 
 - (NSUInteger)lastIndexOfBit:(Bit)bit inRange:(NSRange)range {
-    NSAssert(NSMaxRange(range) < self.storage.count, NSRangeException);
+    NSAssert(NSMaxRange(range) <= self.storage.count, NSRangeException);
 
     for (NSUInteger index = NSMaxRange(range) - 1; index >= range.location; --index) {
         if ([self.storage[index] unsignedIntValue] == bit) {
@@ -121,6 +125,12 @@
         }
     }
     return NSNotFound;
+}
+
+#pragma mark - NSObject
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<%@:%p> {%@}", [self class], self, [self.storage componentsJoinedByString:@","]];
 }
 
 #pragma mark - NSCopying
@@ -166,7 +176,7 @@
 }
 
 - (void)flipBitsInRange:(NSRange)range {
-    NSAssert(NSMaxRange(range) < self.storage.count, NSRangeException);
+    NSAssert(NSMaxRange(range) <= self.storage.count, NSRangeException);
     
     for (NSUInteger index = range.location; index < NSMaxRange(range); ++index) {
         self.storage[index] = @(1 - [self.storage[index] unsignedIntValue]);
@@ -180,7 +190,7 @@
 }
 
 - (void)setBits:(Bit)bits inRange:(NSRange)range {
-    NSAssert(NSMaxRange(range) < self.storage.count, NSRangeException);
+    NSAssert(NSMaxRange(range) <= self.storage.count, NSRangeException);
     
     for (NSUInteger index = range.location; index < NSMaxRange(range); ++index) {
         self.storage[index] = @(bits);
