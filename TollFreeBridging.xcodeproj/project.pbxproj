@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5C7EAD981A8C060E001438E2 /* BinaryHeapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EAD971A8C060E001438E2 /* BinaryHeapTests.m */; };
+		5CBFD30B1A91E18400E7C6F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CC677291A86AE6C00A5062B /* Main.storyboard */; };
+		5CBFD30C1A91E18400E7C6F4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC6772E1A86AE6C00A5062B /* LaunchScreen.xib */; };
 		5CC6772D1A86AE6C00A5062B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CC6772C1A86AE6C00A5062B /* Images.xcassets */; };
-		5CEC47B91A91D8510077FBDE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC6772E1A86AE6C00A5062B /* LaunchScreen.xib */; };
-		5CEC47BA1A91D8560077FBDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CC677291A86AE6C00A5062B /* Main.storyboard */; };
 		5CEC47BB1A91D86C0077FBDE /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 5CC677531A86C35700A5062B /* fishhook.c */; };
 		5CEC47BC1A91D86C0077FBDE /* _Buckets.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FA6F61A90B07500894DC7 /* _Buckets.m */; };
 		5CEC47BD1A91D86C0077FBDE /* _BinaryHeapRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF9CD71A914CE000483107 /* _BinaryHeapRegistration.m */; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				5CC6771E1A86AE6C00A5062B /* TollFreeBridging */,
-				5CC677381A86AE6C00A5062B /* TestTests */,
+				5CC677381A86AE6C00A5062B /* TollFreeBridgingTests */,
 				5CC6771D1A86AE6C00A5062B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,13 +130,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5CC677381A86AE6C00A5062B /* TestTests */ = {
+		5CC677381A86AE6C00A5062B /* TollFreeBridgingTests */ = {
 			isa = PBXGroup;
 			children = (
 				5CC677391A86AE6C00A5062B /* Supporting Files */,
 				5C7EAD971A8C060E001438E2 /* BinaryHeapTests.m */,
 			);
-			name = TestTests;
 			path = TollFreeBridgingTests;
 			sourceTree = "<group>";
 		};
@@ -252,8 +251,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CEC47BA1A91D8560077FBDE /* Main.storyboard in Resources */,
-				5CEC47B91A91D8510077FBDE /* LaunchScreen.xib in Resources */,
+				5CBFD30B1A91E18400E7C6F4 /* Main.storyboard in Resources */,
+				5CBFD30C1A91E18400E7C6F4 /* LaunchScreen.xib in Resources */,
 				5CC6772D1A86AE6C00A5062B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
