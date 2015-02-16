@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5CC677221A86AE6C00A5062B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC677211A86AE6C00A5062B /* main.m */; };
-		5CC677251A86AE6C00A5062B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC677241A86AE6C00A5062B /* AppDelegate.m */; };
-		5CC677281A86AE6C00A5062B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC677271A86AE6C00A5062B /* ViewController.m */; };
-		5CC6772B1A86AE6C00A5062B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CC677291A86AE6C00A5062B /* Main.storyboard */; };
+		5C7EAD981A8C060E001438E2 /* BinaryHeapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EAD971A8C060E001438E2 /* BinaryHeapTests.m */; };
 		5CC6772D1A86AE6C00A5062B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CC6772C1A86AE6C00A5062B /* Images.xcassets */; };
-		5CC677301A86AE6C00A5062B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC6772E1A86AE6C00A5062B /* LaunchScreen.xib */; };
-		5CC6773C1A86AE6C00A5062B /* BitVectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC6773B1A86AE6C00A5062B /* BitVectorTests.m */; };
-		5CC677481A86B4D800A5062B /* BitVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC677471A86B4D800A5062B /* BitVector.m */; };
-		5CC677571A86C35700A5062B /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 5CC677531A86C35700A5062B /* fishhook.c */; };
-		5CC6775C1A86C37700A5062B /* BitVectorUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC6775B1A86C37700A5062B /* BitVectorUtility.m */; };
+		5CEC47B91A91D8510077FBDE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC6772E1A86AE6C00A5062B /* LaunchScreen.xib */; };
+		5CEC47BA1A91D8560077FBDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CC677291A86AE6C00A5062B /* Main.storyboard */; };
+		5CEC47BB1A91D86C0077FBDE /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 5CC677531A86C35700A5062B /* fishhook.c */; };
+		5CEC47BC1A91D86C0077FBDE /* _Buckets.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FA6F61A90B07500894DC7 /* _Buckets.m */; };
+		5CEC47BD1A91D86C0077FBDE /* _BinaryHeapRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF9CD71A914CE000483107 /* _BinaryHeapRegistration.m */; };
+		5CEC47BE1A91D86C0077FBDE /* BinaryHeap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EAD951A8BFE64001438E2 /* BinaryHeap.m */; };
+		5CEC47BF1A91D86C0077FBDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC677241A86AE6C00A5062B /* AppDelegate.m */; };
+		5CEC47C01A91D86C0077FBDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC677271A86AE6C00A5062B /* ViewController.m */; };
+		5CEC47C11A91D89D0077FBDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC677211A86AE6C00A5062B /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C1FA6F51A90B07500894DC7 /* _Buckets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Buckets.h; sourceTree = "<group>"; };
+		5C1FA6F61A90B07500894DC7 /* _Buckets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Buckets.m; sourceTree = "<group>"; };
+		5C7EAD941A8BFE64001438E2 /* BinaryHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryHeap.h; sourceTree = "<group>"; };
+		5C7EAD951A8BFE64001438E2 /* BinaryHeap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryHeap.m; sourceTree = "<group>"; };
+		5C7EAD971A8C060E001438E2 /* BinaryHeapTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryHeapTests.m; sourceTree = "<group>"; };
 		5CC6771C1A86AE6C00A5062B /* TollFreeBridging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TollFreeBridging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC677201A86AE6C00A5062B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CC677211A86AE6C00A5062B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,13 +48,10 @@
 		5CC6772F1A86AE6C00A5062B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5CC677351A86AE6C00A5062B /* TollFreeBridgingTollFreeBridgings.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TollFreeBridgingTollFreeBridgings.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC6773A1A86AE6C00A5062B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CC6773B1A86AE6C00A5062B /* BitVectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitVectorTests.m; sourceTree = "<group>"; };
-		5CC677461A86B4D800A5062B /* BitVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitVector.h; sourceTree = "<group>"; };
-		5CC677471A86B4D800A5062B /* BitVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitVector.m; sourceTree = "<group>"; };
 		5CC677531A86C35700A5062B /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 		5CC677541A86C35700A5062B /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
-		5CC6775A1A86C37700A5062B /* BitVectorUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitVectorUtility.h; sourceTree = "<group>"; };
-		5CC6775B1A86C37700A5062B /* BitVectorUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitVectorUtility.m; sourceTree = "<group>"; };
+		5CCF9CD61A914CE000483107 /* _BinaryHeapRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _BinaryHeapRegistration.h; sourceTree = "<group>"; };
+		5CCF9CD71A914CE000483107 /* _BinaryHeapRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _BinaryHeapRegistration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C1FA6F41A90B05400894DC7 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				5CC677521A86C35700A5062B /* fishhook */,
+				5C1FA6F51A90B07500894DC7 /* _Buckets.h */,
+				5C1FA6F61A90B07500894DC7 /* _Buckets.m */,
+				5CCF9CD61A914CE000483107 /* _BinaryHeapRegistration.h */,
+				5CCF9CD71A914CE000483107 /* _BinaryHeapRegistration.m */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+		5C7EAD931A8BFE59001438E2 /* BinaryHeap */ = {
+			isa = PBXGroup;
+			children = (
+				5C1FA6F41A90B05400894DC7 /* Private */,
+				5C7EAD941A8BFE64001438E2 /* BinaryHeap.h */,
+				5C7EAD951A8BFE64001438E2 /* BinaryHeap.m */,
+			);
+			path = BinaryHeap;
+			sourceTree = "<group>";
+		};
 		5CC677131A86AE6C00A5062B = {
 			isa = PBXGroup;
 			children = (
@@ -90,19 +115,10 @@
 		5CC6771E1A86AE6C00A5062B /* TollFreeBridging */ = {
 			isa = PBXGroup;
 			children = (
-				5CC677521A86C35700A5062B /* fishhook */,
-				5CC677451A86B4CE00A5062B /* BitVector */,
-				5CC677231A86AE6C00A5062B /* AppDelegate.h */,
-				5CC677241A86AE6C00A5062B /* AppDelegate.m */,
-				5CC677261A86AE6C00A5062B /* ViewController.h */,
-				5CC677271A86AE6C00A5062B /* ViewController.m */,
-				5CC677291A86AE6C00A5062B /* Main.storyboard */,
-				5CC6772C1A86AE6C00A5062B /* Images.xcassets */,
-				5CC6772E1A86AE6C00A5062B /* LaunchScreen.xib */,
-				5CC6771F1A86AE6C00A5062B /* Supporting Files */,
+				5C7EAD931A8BFE59001438E2 /* BinaryHeap */,
+				5CEC47B81A91D5F90077FBDE /* Unused App */,
 			);
-			name = TollFreeBridging;
-			path = Test;
+			path = TollFreeBridging;
 			sourceTree = "<group>";
 		};
 		5CC6771F1A86AE6C00A5062B /* Supporting Files */ = {
@@ -117,10 +133,11 @@
 		5CC677381A86AE6C00A5062B /* TestTests */ = {
 			isa = PBXGroup;
 			children = (
-				5CC6773B1A86AE6C00A5062B /* BitVectorTests.m */,
 				5CC677391A86AE6C00A5062B /* Supporting Files */,
+				5C7EAD971A8C060E001438E2 /* BinaryHeapTests.m */,
 			);
-			path = TestTests;
+			name = TestTests;
+			path = TollFreeBridgingTests;
 			sourceTree = "<group>";
 		};
 		5CC677391A86AE6C00A5062B /* Supporting Files */ = {
@@ -131,17 +148,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5CC677451A86B4CE00A5062B /* BitVector */ = {
-			isa = PBXGroup;
-			children = (
-				5CC677461A86B4D800A5062B /* BitVector.h */,
-				5CC677471A86B4D800A5062B /* BitVector.m */,
-				5CC6775A1A86C37700A5062B /* BitVectorUtility.h */,
-				5CC6775B1A86C37700A5062B /* BitVectorUtility.m */,
-			);
-			name = BitVector;
-			sourceTree = "<group>";
-		};
 		5CC677521A86C35700A5062B /* fishhook */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +155,21 @@
 				5CC677541A86C35700A5062B /* fishhook.h */,
 			);
 			path = fishhook;
+			sourceTree = "<group>";
+		};
+		5CEC47B81A91D5F90077FBDE /* Unused App */ = {
+			isa = PBXGroup;
+			children = (
+				5CC677231A86AE6C00A5062B /* AppDelegate.h */,
+				5CC677241A86AE6C00A5062B /* AppDelegate.m */,
+				5CC677261A86AE6C00A5062B /* ViewController.h */,
+				5CC677271A86AE6C00A5062B /* ViewController.m */,
+				5CC677291A86AE6C00A5062B /* Main.storyboard */,
+				5CC6772C1A86AE6C00A5062B /* Images.xcassets */,
+				5CC6772E1A86AE6C00A5062B /* LaunchScreen.xib */,
+				5CC6771F1A86AE6C00A5062B /* Supporting Files */,
+			);
+			name = "Unused App";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +252,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CC6772B1A86AE6C00A5062B /* Main.storyboard in Resources */,
-				5CC677301A86AE6C00A5062B /* LaunchScreen.xib in Resources */,
+				5CEC47BA1A91D8560077FBDE /* Main.storyboard in Resources */,
+				5CEC47B91A91D8510077FBDE /* LaunchScreen.xib in Resources */,
 				5CC6772D1A86AE6C00A5062B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,12 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CC677481A86B4D800A5062B /* BitVector.m in Sources */,
-				5CC677571A86C35700A5062B /* fishhook.c in Sources */,
-				5CC677281A86AE6C00A5062B /* ViewController.m in Sources */,
-				5CC677251A86AE6C00A5062B /* AppDelegate.m in Sources */,
-				5CC677221A86AE6C00A5062B /* main.m in Sources */,
-				5CC6775C1A86C37700A5062B /* BitVectorUtility.m in Sources */,
+				5CEC47C11A91D89D0077FBDE /* main.m in Sources */,
+				5CEC47BB1A91D86C0077FBDE /* fishhook.c in Sources */,
+				5CEC47BC1A91D86C0077FBDE /* _Buckets.m in Sources */,
+				5CEC47BD1A91D86C0077FBDE /* _BinaryHeapRegistration.m in Sources */,
+				5CEC47BE1A91D86C0077FBDE /* BinaryHeap.m in Sources */,
+				5CEC47BF1A91D86C0077FBDE /* AppDelegate.m in Sources */,
+				5CEC47C01A91D86C0077FBDE /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CC6773C1A86AE6C00A5062B /* BitVectorTests.m in Sources */,
+				5C7EAD981A8C060E001438E2 /* BinaryHeapTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Test/Info.plist;
+				INFOPLIST_FILE = TollFreeBridging/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = TollFreeBridging;
 			};
@@ -390,7 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Test/Info.plist;
+				INFOPLIST_FILE = TollFreeBridging/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = TollFreeBridging;
 			};
@@ -408,7 +430,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = TestTests/Info.plist;
+				INFOPLIST_FILE = TollFreeBridgingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = TollFreeBridgingTollFreeBridgings;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TollFreeBridging.app/TollFreeBridging";
@@ -423,7 +445,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = TestTests/Info.plist;
+				INFOPLIST_FILE = TollFreeBridgingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = TollFreeBridgingTollFreeBridgings;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TollFreeBridging.app/TollFreeBridging";
