@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/zats/TollFreeBridging.svg?branch=master)](https://travis-ci.org/zats/TollFreeBridging)
+
 This is a companion sample for the blogpost "Let's build toll-free bridged class"
 http://blog.zats.io/2015/02/14/lets-build-tollfree-bridged-class/
 
